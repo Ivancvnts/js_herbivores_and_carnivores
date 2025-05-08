@@ -37,7 +37,7 @@ class Carnivore extends Animal {
         const index = Animal.alive.indexOf(herbivore);
 
         if (index > -1) {
-          Animal.alive.splice(index, 1);
+          Animal.alive = Animal.alive.filter((animal) => animal.health > 0);
         }
       }
     }
